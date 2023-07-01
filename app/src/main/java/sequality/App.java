@@ -10,6 +10,13 @@ public class App {
 
     public String getResultSumAverage(int x, int y){
         int sum = new Calculate().sum(x,y);
+        int tmp;
+
+        if(x > y){
+          tmp = x;
+          x = y;
+          y = tmp;
+        }
         int n = y - x + 1;
         double ave = new Calculate().average(sum, n);
         return "Sum of " + x + " and " + y + " is " + sum + ".Average is " + ave + ".";
@@ -17,6 +24,13 @@ public class App {
 
     public String getResultSumToAverage(int start, int end){
       int sumTo = new Calculate().sumTo(start, end);
+      int tmp;
+
+      if(start > end){
+        tmp = start;
+        start = end;
+        end = tmp;
+      }
       int n = end - start + 1;
       double ave = new Calculate().average(sumTo, n);
       return "Sum of " + start + " to " + end + " is " + sumTo + ".Average is " + ave + ".";
