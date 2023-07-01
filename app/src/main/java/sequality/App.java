@@ -8,7 +8,30 @@ public class App {
         return "Hello World!";
     }
 
+    public String getResultSumAverage(int x, int y){
+        int sum = new Calculate().sum(x,y);
+        int n = y - x + 1;
+        double ave = new Calculate().average(sum, n);
+        return "Sum of " + x + " and " + y + " is " + sum + ".Average is " + ave + ".";
+    }
+
+    public String getResultSumToAverage(int start, int end){
+      int sumTo = new Calculate().sumTo(start, end);
+      int n = end - start + 1;
+      double ave = new Calculate().average(sumTo, n);
+      return "Sum of " + start + " to " + end + " is " + sumTo + ".Average is " + ave + ".";
+    }
+
+    public String getResultOddEven(int start, int end){
+      int odd = new Calculate().odd(start, end);
+      int even = new Calculate().even(start, end);
+      return "Sum of odd of " + start + " to " + end + " is " + odd + ".Sum of even is " + even + ".";
+    }
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        System.out.println(new App().getResultSumAverage(2,3));
+        System.out.println(new App().getResultSumToAverage(1,10));
+        System.out.println(new App().getResultOddEven(1,10));
     }
 }

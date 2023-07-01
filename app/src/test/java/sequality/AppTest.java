@@ -17,4 +17,22 @@ public class AppTest {
       App classUnderTest = new App();
       assertEquals("Hello World!", classUnderTest.getGreeting());
     }
+
+    @Test
+    public void testAppHasSumAverage(){
+      App classUnderTest = new App();
+      assertNotNull("app should have results of summary and average", classUnderTest.getResultSumAverage(2,3));
+    }
+
+    @Test
+    public void testAppHasSumToAverage(){
+      App classUnderTest = new App();
+      assertNotNull("app should have results of summary(to) and average", classUnderTest.getResultSumToAverage(1,10));
+    }
+
+    @Test
+    public void testAppHasOddEven(){
+      App classUnderTest = new App();
+      assertNotNull("app should have results of odd and even", classUnderTest.getResultOddEven(1,10));
+    }
 }
