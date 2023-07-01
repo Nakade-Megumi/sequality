@@ -25,6 +25,31 @@ public class AppTest {
     }
 
     @Test
+    public void testAppSumAverage(){
+      App classUnderTest = new App();
+      int expected_sum = 5;
+      double expected_ave = 2.5;
+      assertEquals("Sum of " + 2 + " and " + 3 + " is " + expected_sum + ".Average is " + expected_ave + ".", classUnderTest.getResultSumAverage(2,3));
+    }
+
+    @Test
+    public void testAppSumToAverage(){
+      App classUnderTest = new App();
+      int expected_sumTo = 55;
+      double expected_ave = 5.5;
+      assertEquals("Sum of " + 1 + " to " + 10 + " is " + expected_sumTo + ".Average is " + expected_ave + ".", classUnderTest.getResultSumToAverage(1,10));
+    }
+
+    @Test
+    public void testAppOddEven(){
+      App classUnderTest = new App();
+      int expected_odd = 25;
+      int expected_even = 30;
+      assertEquals("Sum of odd of " + 1 + " to " + 10 + " is " + expected_odd + ".Sum of even is " + expected_even + ".", classUnderTest.getResultOddEven(1,10));
+    }
+
+
+    @Test
     public void testAppHasSumToAverage(){
       App classUnderTest = new App();
       assertNotNull("app should have results of summary(to) and average", classUnderTest.getResultSumToAverage(1,10));
