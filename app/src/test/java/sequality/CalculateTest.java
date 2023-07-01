@@ -8,7 +8,7 @@ public class CalculateTest{
   public void testSum(){
     Calculate calculate = new Calculate();
     int expected = 5;
-    assertEquals(expected, calculate.sum(2,3));
+    assertEquals(expected, calculate.sum(3,2));
   }
 
   @Test
@@ -22,20 +22,20 @@ public class CalculateTest{
   public void testSumTo(){
     Calculate calculate = new Calculate();
     int expected = 55;
-    assertEquals(expected, calculate.sumTo(1,10));
+    assertEquals(expected, calculate.sumTo(10,1));
   }
 
   @Test
   public void testOdd(){
     Calculate calculate = new Calculate();
     int expected = 25;
-    assertEquals(expected, calculate.odd(1,10));
+    assertEquals(expected, calculate.odd(10,1));
   }
 
   @Test
   public void testeven(){
     Calculate calculate = new Calculate();
     int expected = 30;
-    assertEquals(expected, calculate.even(1,10));
+    assertEquals(expected, calculate.even(10,1));
   }
 }

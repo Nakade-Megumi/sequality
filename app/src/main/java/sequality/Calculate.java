@@ -11,6 +11,14 @@ public class Calculate{
 
   public int sumTo(int start, int end){
     int sum = 0;
+    int tmp;
+
+    if(start > end){
+      tmp = start;
+      start = end;
+      end = tmp;
+    }
+
     for(int i=start;i<=end;i++){
       sum += i;
     }
@@ -19,6 +27,14 @@ public class Calculate{
 
   public int odd(int start, int end){
     int odd = 0;
+    int tmp;
+
+    if(start > end){
+      tmp = start;
+      start = end;
+      end = tmp;
+    }
+
     for(int i=start;i<=end;i++){
       if(i%2 != 0){
         odd += i;
@@ -29,6 +45,13 @@ public class Calculate{
 
     public int even(int start, int end){
     int even = 0;
+    int tmp;
+    if(start > end){
+      tmp = start;
+      start = end;
+      end = tmp;
+    }
+
     for(int i=start;i<=end;i++){
       if(i%2 == 0){
         even += i;
