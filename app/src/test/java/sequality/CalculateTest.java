@@ -26,6 +26,13 @@ public class CalculateTest{
   }
 
   @Test
+  public void testSumTo_2(){
+    Calculate calculate = new Calculate();
+    int expected = 55;
+    assertEquals(expected, calculate.sumTo(1,10));
+  }
+
+  @Test
   public void testOdd(){
     Calculate calculate = new Calculate();
     int expected = 25;
@@ -33,9 +40,23 @@ public class CalculateTest{
   }
 
   @Test
+  public void testOdd_2(){
+    Calculate calculate = new Calculate();
+    int expected = 25;
+    assertEquals(expected, calculate.odd(1,10));
+  }
+
+  @Test
   public void testeven(){
     Calculate calculate = new Calculate();
     int expected = 30;
     assertEquals(expected, calculate.even(10,1));
+  }
+
+  @Test
+  public void testeven_2(){
+    Calculate calculate = new Calculate();
+    int expected = 30;
+    assertEquals(expected, calculate.even(1,10));
   }
 }
